@@ -36,7 +36,7 @@ app.post('/api/shorturl', function (req, res) {
   let obj = {};
   if (isValidURL(req.body.url)) {
     obj = {
-      original_url: oriUrl,
+      original_url: req.body.url,
       short_url: "jaap" + store.length
     }
     store.push(obj);
